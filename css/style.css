@@ -1,0 +1,813 @@
+@import url(reset.css);
+@import url(media-queries.css);
+
+.d-flex {
+    display: flex;
+}
+
+body {
+    font-family: "Gowun Batang", "Sofadi One", sans-serif;
+}
+
+header {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+.hide {
+    display: none !important;
+}
+
+.header-bc {
+    width: 100%;
+    background-color: #353A40;
+}
+
+.header-row {
+    width: 60%;
+    padding: 10px 0;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__contact-us__items {
+    color: #fff;
+}
+
+.header__contact-us__items a {
+    color: #38A59C;
+    font-family: "Sofadi One";
+}
+
+.header__contact-us__items,
+.header__contact-us__items a {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header__social-media__item {
+    margin: 0 10px;
+}
+
+.header__social-media__item i {
+    color: #38A59C;
+    cursor: pointer;
+}
+
+.header__logo {
+    align-items: center;
+}
+
+.header__logo img {
+    width: 7vw;
+}
+
+.header__logo__title {
+    font-size: 22px;
+    font-family: "Sofadi One";
+}
+
+.header__nav-item {
+    font-weight: 700;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.header__nav-item:hover {
+    color: #38A59C;
+}
+
+.active {
+    color: #38A59C;
+}
+
+.main {
+    background: url(../img/app_banner_3.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    justify-content: center;
+}
+
+.app {
+    width: 75%;
+    padding-top: 40px;
+    flex-direction: column;
+}
+
+.app__header {
+    font: 500 2.2vw "Sofadi One";
+    align-items: center;
+}
+
+.app__header__title {
+    color: #38A59C;
+    position: relative;
+    width: 100%;
+
+}
+
+.app__header__title::before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(92, 0, 157);
+    background: linear-gradient(90deg, rgba(92, 0, 157, 1) 0%, rgba(0, 147, 255, 1) 100%);
+}
+
+/*-----------------------------------*/
+
+.app__cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.app__card {
+    width: calc((100% - 80px)/4);
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px;
+    font: 400 18px "Sofadi One";
+    border: #6a6a6a28 solid 1px;
+    border-radius: 5px;
+    background-color: #fff;
+    opacity: 0.7;
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+
+.app__card:hover {
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+.app__card__img {
+    position: relative;
+}
+
+.app__card__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.app__card__price {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #38A59C;
+    color: aliceblue;
+}
+
+.app__card i {
+    font-size: 16px;
+    color: #38A59C;
+}
+
+.app__card-description {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.app__card__rate {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.app__card__rate span {
+    margin-right: 5px;
+}
+
+.app__card__comment-and-visits {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card--coin-toss {
+    color: #323435ee;
+}
+
+.card--coin-toss .app__card-description {
+    background-color: rgba(255, 217, 0, 0.853);
+}
+
+.card--magic-ball {
+    color: #fff;
+}
+
+.card--magic-ball .app__card-description {
+    background-color: rgba(0, 0, 0, 0.716);
+}
+
+.card--number-guessing {
+    color: #fff;
+}
+
+.card--number-guessing .app__card-description {
+    background: rgb(244, 141, 184);
+    background: linear-gradient(90deg, rgba(244, 141, 184, 1) 0%, rgba(149, 60, 154, 1) 100%);
+}
+
+.card--word-guessing {
+    color: #E8DFCF;
+}
+
+.card--word-guessing .app__card-description {
+    background-color: #302C37;
+}
+
+.card--countdown-timer {
+    color: #E8DFCF;
+}
+
+.card--countdown-timer .app__card-description {
+    background-color: #6C7AFF;
+}
+
+.card--countdown-timer i,
+.card--memory i,
+.card--pingpong i {
+    color: gold;
+}
+
+.card--Jump {
+    color: #515151;
+}
+
+.card--brike-breaker {
+    color: #E1D5E1;
+}
+
+.card--brike-breaker .app__card-description {
+    background-color: #D74857;
+}
+
+.card--canvas-snake {
+    color: #C2E3C6;
+}
+
+.card--canvas-snake .app__card-description {
+    background-color: #43722E;
+}
+
+.card--mine-sweeper .app__card-description {
+    background-color: #D1D1D1;
+}
+
+.card--memory,
+.card--pingpong {
+    color: #FFFFFF;
+}
+
+.card--memory .app__card-description {
+    background-color: #59BDD5;
+}
+
+.card--pingpong .app__card-description {
+    background: rgb(2, 170, 218);
+    background: linear-gradient(90deg, rgba(2, 170, 218, 1) 0%, rgba(255, 85, 70, 1) 100%);
+}
+
+/*--------------------------------------*/
+/* Coin Toss Game styles */
+
+.games {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.games__title {
+    font: 500 26px "Sofadi One";
+    text-transform: uppercase;
+}
+
+.games__description {
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    margin: 10px 0 60px;
+}
+
+.games__setting input {
+    margin: 15px 0;
+}
+
+.ipt-1 {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #38A59C;
+    color: #FFFFFF;
+}
+
+.ipt-1::placeholder {
+    color: #fff;
+}
+
+.games__aria {
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.games__aria {
+    background: url(../img/game_area2.webp);
+    background-size: cover;
+}
+
+.games__aria-img-section {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.games__aria-img {
+    width: 80%;
+}
+
+.cointoss__buttons {
+    display: flex;
+}
+
+.btn-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin: 20px 50px;
+    background-color: #01EAF1;
+    font: 500 18px "Sofadi One";
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-1:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.btn-1 img {
+    width: 60%;
+}
+
+.game__results {
+    font: 26px "Sofadi One";
+    margin-top: 10px;
+    text-align: center;
+}
+
+.game-btn {
+    position: relative;
+    padding: 15px;
+    margin: 10px;
+    background: #66a6db;
+    border-radius: 5px;
+    box-shadow: 1px 1px #b8b8e0, 2px 2px #b8b8e0, 3px 3px #b8b8e0, 4px 4px #b8b8e0, 5px 5px #b8b8e0;
+    font: 500 18px "Sofadi One";
+    color: #FFFFFF;
+    z-index: 1 !important;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.game-btn::before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    border-radius: 5px;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform-origin: 0 50%;
+    -webkit-transform-origin: 0 50%;
+    transition: all 0.3s linear;
+}
+
+.game-btn:hover::before {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+}
+
+.game-btn:active {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    box-shadow: none;
+}
+
+.coin-result-icon {
+    margin-right: 10px;
+}
+
+.fa-check-circle {
+    color: #38A59C;
+}
+
+.fa-minus-circle {
+    color: #D74857;
+}
+
+.coin-result-massage {
+    color: #FFFFFF;
+}
+
+.coin-result-score {
+    font-weight: 200;
+    color: gold;
+}
+
+/*--------------------------------------*/
+/* Magic 8 Ball Game styles */
+
+.MagicBall__game .games__aria-img-section {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.MagicBall__game .games__aria-img {
+    width: 100%;
+}
+
+.MaginBall__input {
+    width: 60%;
+}
+
+.magic_ball_text {
+    font: 300 20px "Sofadi One";
+    position: absolute;
+    top: 240px;
+    right: 160px;
+    z-index: 10;
+    text-align: center;
+    width: 180px;
+}
+
+.textInput {
+    padding: 15px;
+    border-radius: 5px;
+    width: calc(100% - 30px);
+    font: 300 18px "Sofadi One";
+    background-color: black;
+    color: white;
+}
+
+.magicBallinput {
+    text-transform: uppercase;
+}
+
+/*--------------------------------------*/
+/* Number Guessing Game styles */
+
+.games__aria-img-sectio--larger {
+    width: 250px;
+    height: 250px;
+}
+
+.games__aria-img--larger {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.Number_item {
+    padding: 15px 10px;
+    background-color: #FFFFFF;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+/*--------------------------------------*/
+/* Words Guessing Game styles */
+
+.game_area_show_words {
+    text-align: center;
+    width: 250px;
+}
+
+.show-word {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/*--------------------------------------*/
+/* Countdown Timer styles */
+
+#clock_inp {
+    padding: 15px;
+    margin: 20px;
+    font-size: 0.75em;
+    border-radius: 5px;
+    background-color: #6C7AFF;
+}
+
+.timer__game__results {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.result-timer {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.result-timer span {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: red;
+    margin-right: 5px;
+}
+
+/*--------------------------------------*/
+/* Jump Game styles */
+
+.jump-games__aria {
+    background: no-repeat url(../img/BC-Dino.jpg);
+    background-size: cover;
+    width: 90%;
+    height: 400px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.jump-games__aria__sun {
+    width: 80px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.jump-games__aria__dino {
+    width: 65px;
+    position: absolute;
+    bottom: 4.8vw;
+    left: 10px;
+}
+
+.jump {
+    animation: dinoJomp infinite ease-in-out;
+    animation-duration: 0.7s;
+}
+
+.jump-games__aria__cactus {
+    height: 45px;
+    position: absolute;
+    bottom: 5.15vw;
+    left: 100%;
+}
+
+.cactusMove {
+    animation: cactusMove infinite linear;
+    animation-duration: 2.5s;
+}
+
+@keyframes cactusMove {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -150px;
+    }
+}
+
+@keyframes dinoJomp {
+    0% {
+        bottom: 4.8vw;
+    }
+
+    50% {
+        bottom: 15vw;
+    }
+
+    100% {
+        bottom: 4.8vw;
+    }
+
+}
+
+.dinoMassage {
+    color: #515151;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+.dino_score {
+    background-color: #515151;
+    padding: 5px 10px;
+    position: absolute;
+    left: 10px;
+    border-radius: 10px;
+    font: 18px "Gowun Batang";
+}
+
+.freeze {
+    animation-play-state: paused;
+}
+
+/*--------------------------------------*/
+/* CarCrash Game styles */
+
+.car-crash--setting {
+    display: flex;
+    align-items: center;
+    height: 220px;
+}
+
+.select_box {
+    margin: 0 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font: 300 18px "Sofadi One";
+    border-radius: 5px;
+    background-color: #1F1B1A;
+    color: #E1D5E1;
+    text-align: center;
+}
+
+.Chosing_carimg,
+.Chosing_ballimg {
+    width: 50px;
+}
+
+.car-games__aria {
+    background: url(../img/road.jpg);
+    background-size: cover;
+    width: 36%;
+    height: 700px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.move-sc {
+    animation: move-sc 2s infinite linear;
+}
+
+@keyframes move-sc {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 640px;
+    }
+}
+
+.player_car {
+    position: absolute;
+    bottom: 10px;
+    left: 300px;
+    height: fit-content;
+}
+
+.enemy_car {
+    position: absolute;
+    height: fit-content;
+    animation: move-enemy alternate linear;
+    ;
+}
+
+.rotate {
+    rotate: 180deg;
+}
+
+@keyframes move-enemy {
+    0% {
+        top: -200px;
+    }
+
+    100% {
+        top: 800px;
+    }
+}
+
+.car_score {
+    background-color: #D74857;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    border-radius: 10px;
+    font: 18px "Gowun Batang";
+}
+
+.stopAnimation {
+    animation-play-state: paused !important;
+}
+
+/*--------------------------------------*/
+/* Brike Breaker Game styles */
+.game_area_show {
+    width: 95%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+    position: relative;
+}
+
+.chossing-ball-sec {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 25px;
+}
+
+.ball {
+    width: 30px;
+    position: absolute;
+    top: 85%;
+    left: 41.7%;
+    animation: move-ball 1s infinite linear;
+}
+
+.paddle {
+    width: 120px;
+    height: 10px;
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    border-radius: 5px;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+.brick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 91px;
+    height: 40px;
+    padding: 1px;
+    border: 1px solid white;
+}
+
+.number-result-win span {
+    font-size: 21px;
+}
+
+@keyframes move-ball {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.snake-games__setting {
+    align-items: center;
+}
+
+#chosing-color_of_snake {
+    width: 50px;
+    margin-left: 8px;
+}
